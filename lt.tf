@@ -25,7 +25,7 @@ resource "aws_launch_template" "demo-app-lt" {
   ebs_optimized          = false
 
   block_device_mappings {
-    device_name = "/dev/sda"
+    device_name = "/dev/xvda"
 
     ebs {
       volume_size = 15

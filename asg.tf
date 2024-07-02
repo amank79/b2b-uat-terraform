@@ -5,7 +5,7 @@ resource "aws_autoscaling_group" "asg" {
   max_size         = var.max_size
   min_size         = var.min_size
 
-  vpc_zone_identifier = module.vpc.private_subnets
+  vpc_zone_identifier = [module.vpc.private_subnets[0],module.vpc.private_subnets[1]]
   health_check_type   = var.health_check_type
 
   target_group_arns = [aws_lb_target_group.demo-app-tg.arn]

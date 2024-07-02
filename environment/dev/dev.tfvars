@@ -24,11 +24,11 @@ app_tg_port          = 80
 app_tg_protocol      = "HTTP"
 deregistration_delay = 300
 
-#ELB
-lb_name                    = "demo-app-elb"
-lb_type                    = "application"
-demo_app_listener_protocol = "HTTP"
-demo_app_listener_port     = 80
+# #ELB
+# lb_name                    = "demo-app-elb"
+# lb_type                    = "application"
+# demo_app_listener_protocol = "HTTP"
+# demo_app_listener_port     = 80
 
 
 

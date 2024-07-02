@@ -4,7 +4,7 @@ environment = "dev"
 #LT
 lt_name        = "demo-app-lt"
 instance_type  = "t2.micro"
-key_name       = "demo-keypair"
+key_name       = "demo"
 user_data_path = "environment/dev/user_data/bootstrap.sh"
 
 

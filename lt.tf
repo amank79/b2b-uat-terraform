@@ -18,7 +18,7 @@ resource "aws_launch_template" "demo-app-lt" {
   name                   = var.lt_name
   description            = "Launch Template for Demo App using Terraform"
   # image_id             = data.aws_ami.amazon_linux_2023.id
-  image_id               = "ami-00a2cfe86fbfb1e96"  
+  image_id               = "ami-055639f2c3646c99e"  
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.node_sg.id]
   key_name               = var.key_name

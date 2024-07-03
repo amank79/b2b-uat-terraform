@@ -79,22 +79,22 @@ variable "deregistration_delay" {
   type = number
 }
 
-#ELB
-# variable "lb_name" {
-#   type = string
-# }
+# ELB
+variable "lb_name" {
+  type = string
+}
 
-# variable "lb_type" {
-#   type = string
-# }
+variable "lb_type" {
+  type = string
+}
 
-# variable "demo_app_listener_protocol" {
-#   type = string
-# }
+variable "demo_app_listener_protocol" {
+  type = string
+}
 
-# variable "demo_app_listener_port" {
-#   type = number
-# }
+variable "demo_app_listener_port" {
+  type = number
+}
 
 
 

@@ -1,24 +1,24 @@
-# data "aws_ami" "amazon_linux_2023" {
-#   most_recent = true
+data "aws_ami" "amazon_linux_2023" {
+  most_recent = true
 
-#   filter {
-#     name   = "name"
-#     values = ["al2023-ami-2023.5.20240624.0-kernel-6.1-x86_64"]
-#   }
+  filter {
+    name   = "name"
+    values = ["al2023-ami-2023.5.20240624.0-kernel-6.1-x86_64"]
+  }
 
-#   filter {
-#     name   = "virtualization-type"
-#     values = ["hvm"]
-#   }
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
 
-#   owners = ["137112412989"]
-# }
+  owners = ["137112412989"]
+}
 
 resource "aws_launch_template" "demo-app-lt" {
   name                   = var.lt_name
   description            = "Launch Template for Demo App using Terraform"
-  # image_id             = data.aws_ami.amazon_linux_2023.id
-  image_id               = "ami-055639f2c3646c99e"  
+  image_id             = data.aws_ami.amazon_linux_2023.id
+  # image_id               = "ami-055639f2c3646c99e"  
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.node_sg.id]
   key_name               = var.key_name

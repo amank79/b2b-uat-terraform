@@ -20,7 +20,7 @@ strategy                = "Rolling"
 
 #TG
 app_tg_name          = "demo-app-tg"
-app_tg_port          = 80
+app_tg_port          = 8080
 app_tg_protocol      = "HTTP"
 deregistration_delay = 300
 
@@ -45,6 +45,12 @@ nodes_ingress_rules = [
   {
     from_port   = 80
     to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  },
+  {
+    from_port   = 8080
+    to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }

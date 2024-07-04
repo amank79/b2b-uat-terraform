@@ -48,13 +48,13 @@ pipeline {
             }
         }
     }
-      post {
-          success{
-              echo "Success!"
-              mail to:'himalayasingh.hs@gmail.com',
-              subject: "Success: ${env.JOB_NAME} - Build #${env.BUILD_NUMBER}",
-              body: "job '${env.JOB_NAME}' (${env.BUILD_URL}) succeeded. "
-          }
-      }    
+      // post {
+      //     success{
+      //         echo "Success!"
+      //         mail to:'himalayasingh.hs@gmail.com',
+      //         subject: "Success: ${env.JOB_NAME} - Build #${env.BUILD_NUMBER}",
+      //         body: "job '${env.JOB_NAME}' (${env.BUILD_URL}) succeeded. "
+      //     }
+      // }    
 }
 

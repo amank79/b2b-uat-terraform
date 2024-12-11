@@ -16,7 +16,7 @@ pipeline {
         
         stage("Checkout") {
             steps {
-                git branch: 'main', url: 'https://github.com/Himalaya7087/Terraform.git', credentialsId:'PASS'
+                git branch: 'main', url: 'git@github.com:Himalaya7087/Terraform.git', credentialsId:'github-ssh'
             }
         }
         

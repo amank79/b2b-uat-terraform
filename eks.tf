@@ -19,7 +19,7 @@ module "eks" {
 
   }
  eks_managed_node_group_defaults = {
-    ami_type               = "ami-0614680123427b75e"
+    ami_type               = "AL2023_x86_64_STANDARD"
     instance_types         = ["t2.micro"]
     vpc_security_group_ids = [aws_security_group.node_sg.id]
   }

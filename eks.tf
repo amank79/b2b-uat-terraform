@@ -18,7 +18,20 @@ module "eks" {
     eks-pod-identity-agent = {}
 
   }
+ eks_managed_node_group_defaults = {
+    ami_type               = "ami-0614680123427b75e"
+    instance_types         = ["t2.micro"]
+    vpc_security_group_ids = [aws_security_group.node_sg.id]
+  }
 
+  eks_managed_node_groups = {
+
+    node_group = {
+      min_size     = 2
+      max_size     = 6
+      desired_size = 2
+    }
+  }
 
   vpc_id                   = module.vpc.vpc_id
   subnet_ids               = module.vpc.private_subnets

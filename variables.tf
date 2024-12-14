@@ -123,13 +123,13 @@ variable "nodes_egress_rules" {
 }
 
 #IAM
-variable "iam_name" {
-  type    = string
-  default = "demo-app"
-}
+# variable "iam_name" {
+#   type    = string
+#   default = "demo-app"
+# }
 
-variable "iam_policy_arns" {
-  type    = set(string)
-  default = []
-}
+# variable "iam_policy_arns" {
+#   type    = set(string)
+#   default = []
+# }
 

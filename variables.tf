@@ -133,3 +133,8 @@ variable "iam_policy_arns" {
   default = []
 }
 
+variable "access_entry" {
+  description = "List of CIDR blocks allowed to access the EKS cluster"
+  type        = list(string)
+  default     = ["0.0.0.0/0"] # Replace with specific IPs for better security
+}

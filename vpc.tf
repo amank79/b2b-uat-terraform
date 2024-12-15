@@ -27,10 +27,12 @@ module "vpc" {
   }
 
   public_subnet_tags = {
-    type = "kubernetes.io/role/elb = 1"
+    type = "public",
+    "kubernetes.io/role/elb" = "1"
   }
 
   private_subnet_tags = {
-    type = "kubernetes.io/role/internal-elb = 1"
+    type = "private",
+    "kubernetes.io/role/internal-elb" = "1"
   }
 }

@@ -100,27 +100,27 @@ variable "environment" {
 
 
 #Security Group
-variable "sg_name" {
-  type = string
-}
+# variable "sg_name" {
+#   type = string
+# }
 
-variable "nodes_ingress_rules" {
-  type = list(object({
-    from_port   = number
-    to_port     = number
-    protocol    = string
-    cidr_blocks = list(string)
-  }))
-}
+# variable "nodes_ingress_rules" {
+#   type = list(object({
+#     from_port   = number
+#     to_port     = number
+#     protocol    = string
+#     cidr_blocks = list(string)
+#   }))
+# }
 
-variable "nodes_egress_rules" {
-  type = list(object({
-    from_port   = number
-    to_port     = number
-    protocol    = string
-    cidr_blocks = list(string)
-  }))
-}
+# variable "nodes_egress_rules" {
+#   type = list(object({
+#     from_port   = number
+#     to_port     = number
+#     protocol    = string
+#     cidr_blocks = list(string)
+#   }))
+# }
 
 #IAM
 variable "iam_name" {

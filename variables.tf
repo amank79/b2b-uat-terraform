@@ -17,6 +17,11 @@ variable "environment" {
   type = string
 }
 
+#Region
+variable "region" {
+  type = string
+}
+
 
 #Launch Template
 # variable "lt_name" {
@@ -133,8 +138,18 @@ variable "iam_policy_arns" {
   default = []
 }
 
-variable "access_entry" {
-  description = "List of CIDR blocks allowed to access the EKS cluster"
-  type        = list(string)
-  default     = ["0.0.0.0/0"] # Replace with specific IPs for better security
+variable "access_entries" {
+  description = "List of access entries for the EKS cluster"
+  type = list(object({
+    kubernetes_groups = list(string)
+    principal_arn     = string
+    policy_associations = map(object({
+      policy_arn   = string
+      access_scope = object({
+        # namespaces = list(string)
+        type       = string
+      })
+    }))
+  }))
+#   default = []
 }

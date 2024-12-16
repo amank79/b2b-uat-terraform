@@ -10,6 +10,7 @@ module "eks" {
   cluster_endpoint_public_access  = true
 
   cluster_additional_security_group_ids = ["${aws_security_group.control_plane_sg.id}"]
+ access_entries = { for entry in var.access_entries : entry.principal_arn => entry }
 
 
 

@@ -1,5 +1,5 @@
 environment = "dev"
-region = "ap-south-1"
+# region = "ap-south-1"
 
 
 #LT
@@ -72,17 +72,17 @@ iam_policy_arns = ["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore", "arn:
 
 #Access Entries
 
-access_entries = [
-  {
-    kubernetes_groups = []
-    principal_arn     = "arn:aws:iam::116981768032:user/Himalaya"
-    policy_associations = {
-      example = {
-        policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
-        access_scope = {
-          type       = "cluster"
-        }
-      }
-    }
-  }
-]
+# access_entries = [
+#   {
+#     kubernetes_groups = []
+#     principal_arn     = "arn:aws:iam::116981768032:user/Himalaya"
+#     policy_associations = {
+#       example = {
+#         policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
+#         access_scope = {
+#           type       = "cluster"
+#         }
+#       }
+#     }
+#   }
+# ]

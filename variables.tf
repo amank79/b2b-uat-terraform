@@ -138,18 +138,18 @@ variable "iam_policy_arns" {
   default = []
 }
 
-variable "access_entries" {
-  description = "List of access entries for the EKS cluster"
-  type = list(object({
-    kubernetes_groups = list(string)
-    principal_arn     = string
-    policy_associations = map(object({
-      policy_arn   = string
-      access_scope = object({
-        # namespaces = list(string)
-        type       = string
-      })
-    }))
-  }))
-#   default = []
-}
+# variable "access_entries" {
+#   description = "List of access entries for the EKS cluster"
+#   type = list(object({
+#     kubernetes_groups = list(string)
+#     principal_arn     = string
+#     policy_associations = map(object({
+#       policy_arn   = string
+#       access_scope = object({
+#         # namespaces = list(string)
+#         type       = string
+#       })
+#     }))
+#   }))
+#   default = []
+# }

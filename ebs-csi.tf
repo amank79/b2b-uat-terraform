@@ -12,7 +12,7 @@ resource "aws_eks_addon" "ebs_eks_addon" {
 # Create IRSA for EBS CSI Driver using Terraform Modules
 module "ebs_csi_irsa_role" {
   source                = "terraform-aws-modules/iam/aws//modules/iam-role-for-service-accounts-eks"
-  version               = "5.42.0"
+  version               = "5.48.0"
   role_name             = "ebs-csi-eks-role-${var.environment}"
   attach_ebs_csi_policy = true
   oidc_providers = {

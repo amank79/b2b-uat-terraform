@@ -18,9 +18,9 @@ variable "environment" {
 }
 
 #Region
-variable "region" {
-  type = string
-}
+# variable "region" {
+#   type = string
+# }
 
 
 #Launch Template

@@ -1,5 +1,6 @@
 # Create AWS EKS Node Group - Public
 resource "aws_eks_node_group" "eks_ng_private" {
+  depends_on   = [module.eks]
   cluster_name = "eks-cluster"
 
   node_group_name = "${var.environment}-eks-ng-private"

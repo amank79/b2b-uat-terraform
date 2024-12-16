@@ -144,10 +144,10 @@ variable "access_entries" {
     kubernetes_groups = list(string)
     principal_arn     = string
     policy_associations = map(object({
-      policy_arn   = string
+      policy_arn = string
       access_scope = object({
         # namespaces = list(string)
-        type       = string
+        type = string
       })
     }))
   }))

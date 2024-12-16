@@ -1,35 +1,7 @@
 environment = "dev"
+
 region = "ap-south-1"
 
-
-#LT
-# lt_name        = "demo-app-lt"
-# instance_type  = "t2.micro"
-# key_name       = "demo"
-# user_data_path = "environment/dev/user_data/bootstrap.sh"
-
-
-
-#ASG
-# asg_name                = "demo-app-asg"
-# desired_capacity        = 1
-# max_size                = 1
-# min_size                = 1
-# health_check_type       = "EC2"
-# launch_template_version = "$Default"
-# strategy                = "Rolling"
-
-#TG
-# app_tg_name          = "demo-app-tg"
-# app_tg_port          = 8080
-# app_tg_protocol      = "HTTP"
-# deregistration_delay = 300
-
-# #ELB
-# lb_name                    = "demo-app-elb"
-# lb_type                    = "application"
-# demo_app_listener_protocol = "HTTP"
-# demo_app_listener_port     = 80
 
 
 

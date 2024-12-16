@@ -17,7 +17,7 @@ provider "aws" {
 # }
 
 data "aws_eks_cluster" "eks_cluster" {
-  name = module.eks.eks_cluster.cluster_name
+  name = module.eks.cluster_name
 }
 
 provider "helm" {

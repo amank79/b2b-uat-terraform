@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = "${env.PATH}:/opt/homebrew/bin/${env.PATH}"
+        PATH = "${env.PATH}:/opt/homebrew/bin/"
        
     }
     parameters{

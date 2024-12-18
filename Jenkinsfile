@@ -1,6 +1,9 @@
 pipeline {
     agent any
-    
+    environment {
+        PATH = "${env.PATH}:/opt/homebrew/bin/${env.PATH}"
+       
+    }
     parameters{
     choice(name: 'ENVIRONMENT', choices: ['dev', 'prod', 'uat'], description: 'Environment to deploy')
     choice(name: 'ACTION', choices: ['destroy', 'apply'], description: 'Approval Action')

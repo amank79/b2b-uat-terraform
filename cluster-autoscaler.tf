@@ -4,6 +4,7 @@ module "cluster_autoscaler_irsa_role" {
   version                                = "5.42.0"
   role_name                              = "cluster-autoscaler-${var.environment}"
   attach_cluster_autoscaler_policy       = true
+  cluster_autoscaler_cluster_names       = ["${module.eks.cluster_name}"]
   oidc_providers = {
     eks-cluster = {
       provider_arn               = module.eks.oidc_provider_arn

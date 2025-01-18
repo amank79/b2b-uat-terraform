@@ -47,10 +47,10 @@ iam_policy_arns = ["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore", "arn:
 access_entries = [
   {
     kubernetes_groups = []
-    principal_arn     = "arn:aws:iam::116981768032:user/Himalaya"
+    principal_arn     = "arn:aws:iam::905418245711:user/amankumar_aws"
     policy_associations = {
       example = {
-        policy_arn = "arn:aws:iam::905418245711:user/amankumar_aws"
+        policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
         access_scope = {
           type       = "cluster"
         }

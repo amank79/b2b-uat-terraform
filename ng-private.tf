@@ -11,11 +11,11 @@ resource "aws_eks_node_group" "eks_ng_private" {
   ami_type       = "AL2_x86_64"
   capacity_type  = "SPOT"
   disk_size      = 20
-  instance_types = ["t3.small"]
+  instance_types = ["t3a.medium"]
 
 
   remote_access {
-    ec2_ssh_key               = "eks-keypair"
+    ec2_ssh_key               = "mysql-key-pair"
     source_security_group_ids = ["${aws_security_group.ssh_sg.id}"]
   }
 

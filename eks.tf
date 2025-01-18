@@ -2,7 +2,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.0"
 
-  cluster_name    = "eks-cluster"
+  cluster_name    = "eks-cluster-uat"
   cluster_version = "1.30"
   create_iam_role = true
 

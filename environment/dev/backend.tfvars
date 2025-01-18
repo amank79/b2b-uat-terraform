@@ -1,4 +1,4 @@
 region = "ap-south-1"
-bucket = "devopsdemo-terraform-2"
+bucket = "uat-b2bfares-terraform"
 key    = "terraform.tfstate"
 

@@ -1,4 +1,4 @@
-environment = "dev"
+environment = "Staging"
 
 region = "ap-south-1"
 
@@ -6,7 +6,7 @@ region = "ap-south-1"
 
 
 #SG
-# sg_name = "mbpro-sg"
+# sg_name = "uat-sg"
 
 # nodes_ingress_rules = [
 #   {

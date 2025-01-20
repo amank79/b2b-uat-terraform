@@ -1,3 +1,3 @@
 region = "ap-south-1"
-bucket = "devopsdemo-terraform"
-key    = "macbook/uat/terraform.tfstate"
+bucket = "uat-b2bfares-terraform"
+key    = "terraform.tfstate"

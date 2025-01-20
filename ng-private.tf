@@ -1,7 +1,7 @@
 # Create AWS EKS Node Group - Public
 resource "aws_eks_node_group" "eks_ng_private" {
   depends_on   = [module.eks]
-  cluster_name = "eks-cluster-uat"
+  cluster_name = "uat-eks-cluster"
 
   node_group_name = "${var.environment}-eks-ng-private"
   node_role_arn   = aws_iam_role.Demo-App-Role.arn
@@ -9,7 +9,7 @@ resource "aws_eks_node_group" "eks_ng_private" {
   #version = var.cluster_version #(Optional: Defaults to EKS Cluster Kubernetes version)    
 
   ami_type       = "AL2_x86_64"
-  capacity_type  = "ON_DEMAND"
+  capacity_type  = "SPOT"
   disk_size      = 20
   instance_types = ["t3a.medium"]
 
@@ -22,7 +22,7 @@ resource "aws_eks_node_group" "eks_ng_private" {
   scaling_config {
     desired_size = 1
     min_size     = 1
-    max_size     = 3
+    max_size     = 2
   }
 
   # Desired max percentage of unavailable worker nodes during node group update.

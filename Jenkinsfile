@@ -19,7 +19,7 @@ pipeline {
         
         stage("Checkout") {
             steps {
-                git branch: 'main', url: 'git@github.com:Himalaya7087/Terraform.git', credentialsId:'github-ssh'
+                git branch: 'main', url: 'git@github.com:amank79/b2b-uat-terraform.git', credentialsId:'github-ssh'
             }
         }
         

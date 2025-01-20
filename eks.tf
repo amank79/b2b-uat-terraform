@@ -2,8 +2,8 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.0"
 
-  cluster_name    = "eks-cluster-uat"
-  cluster_version = "1.30"
+  cluster_name    = "uat-eks-cluster"
+  cluster_version = "1.31"
   create_iam_role = true
 
   cluster_endpoint_private_access = true
@@ -26,7 +26,7 @@ module "eks" {
 
 
   tags = {
-    Environment = "dev"
+    Environment = "uat"
     Terraform   = "true"
   }
 }
